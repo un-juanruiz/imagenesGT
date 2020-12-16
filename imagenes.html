@@ -23,30 +23,30 @@
         <nav class="busqueda">
             <form class="form-inline my-2 my-lg-0 mx-auto">
               <input class="form-control mr-sm-2" size="70xp" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" style="background-color:#F1D1B5" type="submit">Search</button>
+              <button class="btn btn-primary"  type="submit">Search</button>
             </form>  
         </nav>
     </div>
   <div class="espacioDeBarra"></div>
-  <div class="list-group" style="position: fixed;">
+  <div class="list-group"  style="position: fixed;" >
     <h2>Categorias</h2>
-    <a href="#" class="list-group-item list-group-item-action active">
-      Cras justo odio
+    <a href="#" class="list-group-item list-group-item-action">
+      Categoría 1
     </a>
-    <a href="#" class="list-group-item list-group-item-action">Categoría 1</a>
-    <a href="#" class="list-group-item list-group-item-action">Categoría 2</a>
+    <a href="#" class="list-group-item list-group-item-action" >Categoría 2</a>
     <a href="#" class="list-group-item list-group-item-action">Categoría 3</a>
     <a href="#" class="list-group-item list-group-item-action ">Categoría 4</a>
+    <a href="#" class="list-group-item list-group-item-action" >Categoría 5</a>
   </div>
   
   <div>
-    <div class="botonnuevo"><button >     Nueva Imagen     </button>
+    <div class="botonnuevo"><button type="button" class="btn btn-info" style="height:40px; width:210px"> Nueva Imagen  </button>
 
     </div>
     <table align="center" width="700xp" cellpadding="0" >
       <tr>
         <td colspan="7"><div class="text-center .col-lg-8">
-        <img src="imagenes/perrito.jpg" class="rounded" alt="perrito">
+        <img  src="imagenes/perrito.jpg" class="rounded"  alt="perrito">
       </div></td>
       <td> </td>
       <td> </td>
@@ -55,12 +55,13 @@
       <td> </td>
       <td> </td>
      </tr>
-     <tr bgcolor=" #568EA6">
-        <td width="450xp" height="20xp"></td>
-        <td> <button class="sinborde"> Actualizar</button> </td>
-        <td > <button class="sinborde">Descargar</button> </td>
-        <td> <button class="sinborde">Eliminar</button></td>
-    </tr>
+     <tr bgcolor=" #568EA6" height="40px">
+      <td width="450xp" height="20xp"></td>
+      <td> <a href="#" style="color: #F1D1B5;">Actualizar</a></td>
+      <td> <a href="#" style="color: #F1D1B5;">Descargar</a></td>
+      <td> <a href="#" style="color: #F1D1B5;" onclick="eliminar()">Eliminar</a></td>
+  </tr>
+        
     </table>
   </div>
  <br>
@@ -77,12 +78,12 @@
     <td> </td>
     <td> </td>
    </tr>
-   <tr bgcolor=" #568EA6">
-      <td width="450xp" height="20xp"></td>
-      <td> <button class="sinborde"> Actualizar</button> </td>
-      <td > <button class="sinborde">Descargar</button> </td>
-      <td> <button class="sinborde">Eliminar</button></td>
-  </tr>
+   <tr bgcolor=" #568EA6" height="40px">
+    <td width="450xp" height="20xp"></td>
+    <td> <a href="#" style="color: #F1D1B5;">Actualizar</a></td>
+    <td> <a href="#" style="color: #F1D1B5;">Descargar</a></td>
+    <td> <a href="#" style="color: #F1D1B5;" onclick="eliminar();" >Eliminar</a></td>
+</tr>
   </table>
 </div>
     
@@ -90,5 +91,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="scripts/scripts.js"></script>
+<script src="scripts/alerta.js"></script>
 </html>
