@@ -28,7 +28,7 @@ body{
     width: 100%;
     background-color: #F1D1B5;
 }
-h1, p{
+h1, p, h3{
     color: white;
 }
 .col-sm-2 col-form-label{
@@ -131,4 +131,40 @@ a:link{
 }
 a:visited{
     color:#305F72;
+}
+.window-notice {
+    background:#F1D1B5;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+}
+.window-notice .content {
+    background:#568EA6;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 600px;
+    min-width: 320px !important;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+.img-fluid{
+    width: 100%;
+}
+
+.custom-file-input:lang(en)~.custom-file-label::after{
+    content: "Subir archivo";
+}
+.form-check-label{
+    color: #fff;
 }
