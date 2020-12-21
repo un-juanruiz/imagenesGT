@@ -6,45 +6,46 @@
     <title>Grupo T1 Uninorte - Registro</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}" type="text/css">
 </head>
 <body>
+    <div></div>
     <div class="barraSuperior">
-        <img src="imagenes/logo.png" width="30" height="30" class="logo" alt="">
+        <img src={{ url_for('static', filename='images/logo.png') }} width="30" height="30" class="logo" alt="">
         <h1>Regístrate</h1>
         <p> Grupo T1 Uninorte</p>
     </div>
 
     <div class="cajaCentral">
-        <form>
+        <form action="" method="POST" onsubmit="return validar_formulario();">
           <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-form-label" style="color:white">Nombre:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+              <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
             </div>
           </div>
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label" style="color:white">Usuario:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+              <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario">
             </div>
           </div>
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label" style="color:white">Email:</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="email" placeholder="ejemplo@ejemplo.com">
+              <input type="email" class="form-control" name="correo" id="correo" placeholder="ejemplo@ejemplo.com">
             </div>
           </div>
           <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-form-label" style="color:white">Contraseña:</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control" id="contraseña" placeholder="Contraseña">
+              <input type="password" class="form-control" name="clave" id="clave" placeholder="Contraseña">
             </div>
           </div>
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label" style="color:white">Confirmar contraseña:</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control" id="confirmarContraseña" placeholder="Contraseña">
+              <input type="password" class="form-control"  name="conf_clave" id="conf_clave" placeholder="Contraseña">
             </div>
           </div>
           <button type="submit" class="btn btn-primary">Registrar</button>
@@ -54,5 +55,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="scripts/scripts.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/validacion.js') }}"></script>
 </html>
