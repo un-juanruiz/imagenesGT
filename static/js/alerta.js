@@ -14,4 +14,10 @@ function eliminar(){
         }
       });
     }
-    
+  
+
+function actualizada(){
+  swal("La imagen ha sido eliminada", {
+    icon: "success",
+        });
+      };
