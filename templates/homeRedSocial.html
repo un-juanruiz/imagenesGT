@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block contenido %} 
+
+  <div class="list-group"  style="position: fixed;" >
+    <h2>Categorias</h2>
+    <a href="#" class="list-group-item list-group-item-action">
+      Categoría 1
+    </a>
+    <a href="#" class="list-group-item list-group-item-action" >Categoría 2</a>
+    <a href="#" class="list-group-item list-group-item-action">Categoría 3</a>
+    <a href="#" class="list-group-item list-group-item-action ">Categoría 4</a>
+    <a href="#" class="list-group-item list-group-item-action" >Categoría 5</a>
+  </div>
+  
+  <div>
+    <div class="botonnuevo"><button type="button" class="btn btn-info" style="height:40px; width:210px"> Nueva Imagen  </button>
+
+    </div>
+    <table align="center" width="700xp" cellpadding="0" >
+      <tr>
+        <td colspan="7"><div class="text-center .col-lg-8">
+        <img  src={{ url_for('static', filename='images/perrito.jpg') }} class="rounded"  alt="perrito">
+      </div></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+     </tr>
+     <tr bgcolor=" #568EA6" height="40px">
+      <td width="450xp" height="20xp"></td>
+      <td> <a href="#"  onclick="window.open('/actualizarImagen','popup', 'top=100, left=100',
+         'width=480, height=300')" style="color: #F1D1B5;">Actualizar</a></td>
+      <td> <a href="#" style="color: #F1D1B5;">Descargar</a></td>
+      <td> <a href="#" style="color: #F1D1B5;" onclick="eliminar()">Eliminar</a></td>
+  </tr>
+        
+    </table>
+  </div>
+ <br>
+ <div>
+  <table align="center" width="700xp" cellpadding="0" >
+    <tr>
+      <td colspan="7"><div class="text-center .col-lg-8">
+        <img src= {{ url_for('static', filename='images/Gatito.jpg') }} class="rounded"  alt="Gatito">
+      </div></td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+   </tr>
+   <tr bgcolor=" #568EA6" height="40px">
+    <td width="450xp" height="20xp"></td>
+    <td> <a href="#" style="color: #F1D1B5;">Actualizar</a></td>
+    <td> <a href="#" style="color: #F1D1B5;">Descargar</a></td>
+    <td> <a href="#" style="color: #F1D1B5;" onclick="eliminar();" >Eliminar</a></td>
+</tr>
+  </table>
+</div>
+    
+{% endblock %}

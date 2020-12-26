@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block contenido %} 
+
+    <div class="cajaCentral">
+        <form action="" method="POST" onsubmit="return validar_formulario();">
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label" style="color:white">Nombre:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label" style="color:white">Usuario:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label" style="color:white">Email:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" name="correo" id="correo" placeholder="ejemplo@ejemplo.com">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label" style="color:white">Contraseña:</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" name="clave" id="clave" placeholder="Contraseña">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label" style="color:white">Confirmar contraseña:</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control"  name="conf_clave" id="conf_clave" placeholder="Contraseña">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+
+{% endblock %}
